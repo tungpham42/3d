@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ mặt trời</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="play-all-model-animations.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item
+          id="model1"
+          src="./models/solar-system.glb"
+        ></a-asset-item>
+      </a-assets>
+      <a-entity
+        gltf-model="#model1"
+        play-all-model-animations
+        position="0 0 0"
+        rotation="0 0 0"
+        scale="0.5 0.5 0.5"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>

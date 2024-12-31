@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tung Pham's 3D Projects</title>
+    <title>Giới Thiệu Dự Án 3D</title>
+    <!-- Kết nối với Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
@@ -11,74 +12,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script src="play-all-model-animations.js"></script>
+    <style>
+      .project-card {
+        transition: transform 0.3s ease;
+      }
+      .project-card:hover {
+        transform: scale(1.05);
+      }
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .project-description {
+        font-size: 1rem;
+        color: #555;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">3D Projects</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <header class="bg-primary text-white text-center py-5">
+      <h1>Giới Thiệu Các Dự Án</h1>
+      <p class="lead">Khám phá những dự án nổi bật của tôi</p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Welcome to Our 3D Showcase</h1>
-      <p>Explore stunning 3D models right in your browser!</p>
-      <a href="#projects" class="btn btn-primary">Explore Projects</a>
-    </section>
+    <!-- Dự Án -->
+    <section class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Dự án 1 -->
+        <div class="col">
+          <div class="card project-card shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title project-title">Dự Án 1</h5>
+              <p class="card-text project-description">
+                Đây là mô hình Hệ mặt trời.
+              </p>
+              <a href="./1.html" class="btn btn-primary">Xem Chi Tiết</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Our Projects</h2>
-        <div class="row g-4">
-          <!-- Project 1 -->
-          <div class="col-md-4">
-            <div class="project-card">
-              <a-scene>
-                <a-assets>
-                  <a-asset-item
-                    id="model1"
-                    src="./models/solar-system.glb"
-                  ></a-asset-item>
-                </a-assets>
-                <a-entity
-                  gltf-model="#model1"
-                  play-all-model-animations
-                  position="0 0 0"
-                  rotation="0 0 0"
-                  scale="0.5 0.5 0.5"
-                ></a-entity>
-                <a-sky color="#000000"></a-sky>
-              </a-scene>
-              <div class="p-3">
-                <h5>Project 1</h5>
-                <p>Explore this amazing Solar system model.</p>
-              </div>
+        <!-- Dự án 2 -->
+        <div class="col">
+          <div class="card project-card shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title project-title">Dự Án 2</h5>
+              <p class="card-text project-description">
+                Đây là mô hình xe Lamborghini.
+              </p>
+              <a href="./2.html" class="btn btn-primary">Xem Chi Tiết</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dự án 3 -->
+        <div class="col">
+          <div class="card project-card shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title project-title">Dự Án 3</h5>
+              <p class="card-text project-description">
+                Đây là mô hình Anime PC.
+              </p>
+              <a href="./3.html" class="btn btn-primary">Xem Chi Tiết</a>
             </div>
           </div>
         </div>
@@ -86,11 +81,11 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Tung Pham. All Rights Reserved.</p>
-      <p><a href="mailto:tung.42@gmail.com">tung.42@gmail.com</a></p>
+    <footer class="bg-dark text-white text-center py-4">
+      <p>&copy; 2024 Các Dự Án của Phạm Tùng</p>
     </footer>
 
+    <!-- Kết nối với Bootstrap JS và Popper.js -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"
       integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
