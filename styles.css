@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project-card a-scene {
+  height: 200px;
+}
+footer {
+  background: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
