@@ -8,7 +8,12 @@
     <script src="play-all-model-animations.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
       <a-assets>
         <a-asset-item
           id="model1"
@@ -16,13 +21,13 @@
         ></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity
-        gltf-model="#model1"
+      <a-gltf-model
+        src="#model1"
         play-all-model-animations
         rotation="90 0 0"
         position="0 0 0"
-        scale="0.0125 0.0125 0.0125"
-      ></a-entity>
+        scale="0.025 0.025 0.025"
+      ></a-gltf-model>
     </a-scene>
   </body>
 </html>
